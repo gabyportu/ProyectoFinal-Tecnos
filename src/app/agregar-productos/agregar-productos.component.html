@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row col-md-12 mx-auto">
+        <div class="card">
+            <div class="card-body">
+                <form #productoForm="ngForm" (ngSubmit)="agregar()">
+                    <div class="col-md-12 mb-2">
+                        <label for="producto">Nombre de Producto</label>
+                        <input type="text" class="form-control"  placeholder="Producto" [(ngModel)]="producto.producto" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-md-12 mb-2">
+                        <label for="precio">Precio</label>
+                        <input type="number" class="form-control" placeholder="Precio" [(ngModel)]="producto.precio" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-md-12 mb-2">
+                        <label for="Stock">Stock</label>
+                        <input type="number" class="form-control" placeholder="Stock" [(ngModel)]="producto.stock" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-md-12 mb-2">
+                        <label for="quien">Para quien</label>
+                        <select class="form-control" [(ngModel)]="producto.quien" [ngModelOptions]="{standalone: true}">
+                            <option selected>Seleccione</option>
+                            <option value="1">Hombre</option>
+                            <option value="2">Mujer</option>
+                            <option value="3">Niños</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12 mb-2">
+                        <label for="descripción">Descripción</label>
+                        <input type="text" class="form-control" placeholder="Descripcion" [(ngModel)]="producto.descripcion" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-md-12 mb-2"> 
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
